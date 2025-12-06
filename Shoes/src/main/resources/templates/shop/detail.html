@@ -72,7 +72,7 @@
                         <div class="product-single-carousel owl-carousel owl-theme">
                             <th:block th:each="img :${product.productImages}">
                                 <div class="product-item">
-                                    <img class="product-single-image" th:src="${img}" th:attr="data-zoom-image=${img}"/>
+                                    <img class="product-single-image" th:src="${img}" th:alt="${product.name}" th:attr="data-zoom-image=${img}"/>
                                 </div>
                             </th:block>
                         </div>
@@ -82,7 +82,7 @@
                     <div class="prod-thumbnail owl-dots" id='carousel-custom-dots'>
                         <th:block th:each="img :${product.productImages}">
                             <div class="owl-dot">
-                                <img th:src="@{${img}}"/>
+                                <img th:src="@{${img}}" th:alt="${product.name}"/>
                             </div>
                         </th:block>
                     </div>
