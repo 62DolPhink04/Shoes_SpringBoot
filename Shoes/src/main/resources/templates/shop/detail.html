@@ -185,7 +185,7 @@
                         <th:block th:each="img :${product.feedbackImages}">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                   <img th:src="@{${img}}">
+                                   <img th:src="@{${img}}" th:attr="data-zoom-image=${img}" th:alt="${product.name}">
                                 </figure>
                             </div>
                         </th:block>
@@ -267,7 +267,7 @@
                     <div class="product-default inner-quickview inner-icon">
                         <figure>
                             <a th:href="@{/{slug}/{id}(id=${related.id},slug=${related.slug})}">
-                                <img th:src="@{${related.images}}">
+                                <img th:src="@{${related.images}}" th:attr="data-zoom-image=${img}" th:alt="${product.name}">
                             </a>
                         </figure>
                         <div class="product-details">
