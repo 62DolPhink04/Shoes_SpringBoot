@@ -1,0 +1,31 @@
+User-agent: *
+# 1. Cho phép Google truy cập tài nguyên
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /vendor/
+Allow: /adminlte/
+
+# 2. Cấm Google vào các trang quản trị
+Disallow: /admin/
+Disallow: /api/
+Disallow: /error
+
+# 3. Cấm Google vào các trang cá nhân/thanh toán
+Disallow: /cart
+Disallow: /gio-hang
+Disallow: /checkout
+Disallow: /thanh-toan
+Disallow: /account
+Disallow: /tai-khoan
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+
+# 4. Cấm Google index kết quả tìm kiếm (Sửa dòng này thêm dấu / ở đầu)
+Disallow: /search
+Disallow: /tim-kiem
+Disallow: /*?q=
+
+# 5. Sitemap
+Sitemap: https://shoes-springboot.onrender.com/sitemap.xml
