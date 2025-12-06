@@ -201,7 +201,7 @@
                                     <th:block th:each="comment : ${product.comments}">
                                         <li class="comment-container">
                                             <div class="comment-avatar">
-                                                <img th:src="@{/shop/images/avatar/avatar.png}" width="65" height="65" alt="avatar"/>
+                                                <img th:src="@{/shop/images/avatar/avatar.png}" width="65" height="65" th:alt="${comment.user.fullName}"/>
                                             </div><!-- End .comment-avatar-->
                                             <div class="comment-box">
 <!--                                                <div class="ratings-container">-->
